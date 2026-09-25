@@ -20,7 +20,7 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Pre-Event", href: "#announcement" },
+    { label: "Coming Up", href: "#announcement" },
     { label: "About", href: "#about" },
     { label: "Highlights", href: "#highlights" },
     { label: "Programme", href: "#schedule" },
