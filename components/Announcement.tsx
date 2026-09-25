@@ -47,7 +47,7 @@ export function Announcement() {
                   Distinguished Speaker
                 </span>
                 <span className="text-base sm:text-lg font-semibold text-white">
-                  Prof. Aditya Nema
+                  Dr. Aditya Nema
                 </span>
                 <span className="text-xs font-mono text-qiskit-purple-light ml-2">
                   IIT Delhi
@@ -135,23 +135,18 @@ export function Announcement() {
             </div>
           </div>
 
-          {/* Right Column: Clean Poster Display (No enlarge overlay or modal) */}
+          {/* Right Column: Clean Poster Display (No caption or overlay) */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-sm sm:max-w-md rounded-2xl overflow-hidden border border-foundation-border/80 bg-foundation-surface shadow-2xl">
               <div className="relative aspect-[4/5] w-full bg-black/40">
                 <Image
                   src="/assets/images/aditya_nema_talk.jpeg"
-                  alt="Poster: Prof. Aditya Nema on Fundamentals of Quantum Computing, Information and Learning"
+                  alt="Poster: Dr. Aditya Nema on Fundamentals of Quantum Computing, Information and Learning"
                   fill
                   sizes="(max-width: 768px) 100vw, 420px"
                   className="object-contain p-2"
                   priority
                 />
-              </div>
-
-              <div className="p-3 bg-foundation-elevated/70 border-t border-foundation-border/60 flex items-center justify-between text-xs font-mono text-[#BDCDEF]">
-                <span>Official Event Poster</span>
-                <span className="text-qiskit-pink">Mon, 28th Sept</span>
               </div>
             </div>
           </div>
