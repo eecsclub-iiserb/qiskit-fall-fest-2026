@@ -4,6 +4,7 @@ import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { QuantumBackground } from "@/components/QuantumBackground";
 import { Hero } from "@/components/Hero";
+import { Announcement } from "@/components/Announcement";
 import { ValueProps } from "@/components/ValueProps";
 import { About } from "@/components/About";
 import { Schedule } from "@/components/Schedule";
@@ -52,6 +53,9 @@ export default function HomePage() {
       <main id="main-content" className="flex-1 relative z-10">
         {/* 1. Hero Section */}
         <Hero />
+
+        {/* 1.5 Announcement: Pre-Event Talk */}
+        <Announcement />
 
         {/* 2. Learn / Build / Collaborate */}
         <ValueProps />
