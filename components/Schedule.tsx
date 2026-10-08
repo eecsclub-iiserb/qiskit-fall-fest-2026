@@ -6,7 +6,8 @@ import {
   ChevronDown,
   ChevronUp,
   Calendar,
-  AlertCircle,
+  Clock,
+  User,
 } from "lucide-react";
 import AnimatedList from "./AnimatedList";
 import { useScheduleStore } from "@/store/useScheduleStore";
@@ -54,8 +55,8 @@ export function Schedule() {
           </div>
 
           <div className="flex items-center gap-2 text-xs font-mono text-[#BDCDEF] px-3.5 py-2 rounded bg-foundation-surface border border-foundation-border self-start md:self-auto">
-            <AlertCircle className="w-4 h-4 text-qiskit-pink flex-shrink-0" />
-            <span>Timings to be confirmed closer to the event</span>
+            <Clock className="w-4 h-4 text-qiskit-blue flex-shrink-0" />
+            <span>Starting times confirmed • Sep 28 - Oct 18, 2026</span>
           </div>
         </div>
 
@@ -142,7 +143,7 @@ export function Schedule() {
                   {/* Left: Day & Date Badge */}
                   <div className="lg:w-44 flex-shrink-0 flex items-center gap-3">
                     <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-qiskit-purple/15 text-qiskit-purple-light border border-qiskit-purple/25">
-                      Day 0{event.day}
+                      {event.dayLabel || `Day 0${event.day}`}
                     </span>
                     <div className="flex items-center gap-1.5 text-xs font-mono">
                       <Calendar className="w-3.5 h-3.5 text-qiskit-blue flex-shrink-0" />
@@ -150,15 +151,28 @@ export function Schedule() {
                     </div>
                   </div>
 
-                  {/* Center: Title */}
+                  {/* Center: Title & Speaker */}
                   <div className="flex-1 min-w-0">
                     <h3 className="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-white group-hover:text-qiskit-blue transition-colors">
                       {event.title}
                     </h3>
+                    {event.speaker && (
+                      <div className="flex items-center gap-1.5 text-xs text-[#BDCDEF] mt-1 font-mono">
+                        <User className="w-3 h-3 text-qiskit-blue flex-shrink-0" />
+                        <span>{event.speaker}</span>
+                      </div>
+                    )}
                   </div>
 
-                  {/* Right: Venue & Accordion Indicator */}
-                  <div className="flex items-center justify-between lg:justify-end gap-4 lg:w-60 flex-shrink-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-foundation-border/40">
+                  {/* Right: Time, Venue & Accordion Indicator */}
+                  <div className="flex items-center justify-between lg:justify-end gap-3 lg:w-72 flex-shrink-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-foundation-border/40">
+                    {event.time && (
+                      <div className="flex items-center gap-1.5 text-xs font-mono text-qiskit-purple-light bg-qiskit-purple/10 px-2.5 py-1 rounded border border-qiskit-purple/25">
+                        <Clock className="w-3.5 h-3.5 text-qiskit-pink flex-shrink-0" />
+                        <span>{event.time}</span>
+                      </div>
+                    )}
+
                     <div className="flex items-center gap-1.5 text-xs font-mono text-[#BDCDEF] bg-foundation-elevated/60 px-2.5 py-1 rounded border border-foundation-border/60">
                       <MapPin className="w-3.5 h-3.5 text-qiskit-blue flex-shrink-0" />
                       <span>{event.venue}</span>
@@ -190,15 +204,38 @@ export function Schedule() {
                   <div className="overflow-hidden">
                     <div className="px-5 sm:px-6 pb-6 pt-3 border-t border-foundation-border/60 bg-foundation-elevated/30">
                       <div className="space-y-3">
-                        <span className="text-[#BDCDEF] uppercase tracking-wider block font-semibold text-xs font-mono">
-                          Session Overview
-                        </span>
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-[#BDCDEF] uppercase tracking-wider block font-semibold text-xs font-mono">
+                            Session Overview
+                          </span>
+                          <span className="text-xs font-mono px-2 py-0.5 rounded bg-foundation-surface border border-foundation-border text-qiskit-blue">
+                            Format: {event.format} • Level: {event.level}
+                          </span>
+                        </div>
                         <p className="text-sm text-[#E0E0E0]/90 leading-relaxed">
                           {event.description}
                         </p>
-                        <div className="flex items-center gap-1.5 text-xs font-mono text-qiskit-blue pt-1">
-                          <Calendar className="w-3.5 h-3.5 flex-shrink-0" />
-                          <span>{event.date} ({event.weekday})</span>
+                        {event.speaker && (
+                          <div className="text-xs text-[#BDCDEF] font-mono">
+                            <span className="text-foundation-muted">Speaker: </span>
+                            <span className="text-white font-medium">{event.speaker}</span>
+                          </div>
+                        )}
+                        <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-qiskit-blue pt-1">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar className="w-3.5 h-3.5 flex-shrink-0" />
+                            <span>{event.date} ({event.weekday})</span>
+                          </div>
+                          {event.time && (
+                            <div className="flex items-center gap-1.5 text-qiskit-purple-light">
+                              <Clock className="w-3.5 h-3.5 text-qiskit-pink flex-shrink-0" />
+                              <span>Starts at {event.time}</span>
+                            </div>
+                          )}
+                          <div className="flex items-center gap-1.5 text-[#BDCDEF]">
+                            <MapPin className="w-3.5 h-3.5 text-qiskit-blue flex-shrink-0" />
+                            <span>Venue: {event.venue}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
