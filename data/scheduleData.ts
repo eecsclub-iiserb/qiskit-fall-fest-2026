@@ -150,12 +150,12 @@ export const scheduleEvents: ScheduleEvent[] = [
     time: "4:30 PM",
     title: "Hackathon Presentations & Ending Ceremony",
     venue: "LHC L1",
-    speaker: "Finalist Teams, Jury Panel & Organizers",
+    speaker: "Selected Teams, Jury Panel & Organizers",
     format: "Ceremony",
     level: "All Levels",
     description:
-      "Final project demonstrations by hackathon participants, jury evaluation, award ceremony, and official closing celebrations.",
-    prerequisites: "Hackathon participants and general attendees.",
+      "Selected teams, invited after submissions are reviewed, give 5-minute demos plus Q&A before the jury, followed by the closing ceremony. The ceremony is open to all.",
+    prerequisites: "Open to all attendees.",
   },
 ];
 
