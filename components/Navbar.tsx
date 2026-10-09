@@ -24,6 +24,7 @@ export function Navbar() {
     { label: "About", href: "#about" },
     { label: "Highlights", href: "#highlights" },
     { label: "Programme", href: "#schedule" },
+    { label: "Hackathon", href: "#hackathon" },
     { label: "Organizers", href: "#organizers" },
     { label: "Venue", href: "#venue" },
     { label: "FAQ", href: "#faq" },
@@ -95,7 +96,7 @@ export function Navbar() {
 
         {/* Desktop Nav Links */}
         <nav
-          className="hidden lg:flex items-center gap-7 text-sm font-medium text-[#E0E0E0]"
+          className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-[#E0E0E0]"
           aria-label="Main Navigation"
         >
           {navLinks.map((link) => (

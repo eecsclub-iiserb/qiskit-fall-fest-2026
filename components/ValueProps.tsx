@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BookOpen, Cpu, Users } from "lucide-react";
+import { BookOpen, Cpu, Users, ArrowUpRight } from "lucide-react";
 
 export function ValueProps() {
   const cards = [
@@ -84,6 +84,18 @@ export function ValueProps() {
                   <p className="text-sm text-[#E0E0E0]/80 leading-relaxed">
                     {card.description}
                   </p>
+
+                  {card.num === "03" && (
+                    <div className="mt-5 pt-4 border-t border-foundation-border/50">
+                      <a
+                        href="#hackathon"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-qiskit-pink hover:text-white transition-colors group-hover:translate-x-0.5 duration-150"
+                      >
+                        <span>Explore Hackathon Challenges</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             );
