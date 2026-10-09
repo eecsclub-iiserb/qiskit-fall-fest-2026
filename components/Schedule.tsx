@@ -8,6 +8,7 @@ import {
   Calendar,
   Clock,
   User,
+  ArrowUpRight,
 } from "lucide-react";
 import AnimatedList from "./AnimatedList";
 import { useScheduleStore } from "@/store/useScheduleStore";
@@ -237,6 +238,18 @@ export function Schedule() {
                             <span>Venue: {event.venue}</span>
                           </div>
                         </div>
+
+                        {(event.id === "d1-e1" || event.id === "d6-e1") && (
+                          <div className="pt-2">
+                            <a
+                              href="#hackathon"
+                              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono font-medium rounded-md bg-qiskit-purple/20 text-qiskit-purple-light hover:bg-qiskit-purple/30 border border-qiskit-purple/30 transition-colors"
+                            >
+                              <span>Explore Hackathon Problem Statements</span>
+                              <ArrowUpRight className="w-3.5 h-3.5" />
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
