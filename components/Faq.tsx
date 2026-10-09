@@ -38,6 +38,11 @@ export function Faq() {
         "Details regarding guest house and hostel accommodation allocations for non-IISER Bhopal participants are currently under final administrative review [TBD]. Please register your interest in the form, and our hospitality team will share lodging options prior to the event.",
     },
     {
+      question: "What are the submission deliverables for the week-long hackathon?",
+      answer:
+        "Teams can pick from the 10 official problem statements across 6 tracks (Quantum Chemistry, QML, QAOA & Optimisation, Quantum Error Correction, QKD, and Post-Quantum Cryptography), combine tracks, or propose an original idea. Each team submits a reproducible code repository or notebook, a 2 to 4 page write-up, at least one figure demonstrating the main result, an AI-use note, and delivers a 5-minute live demo before the jury. Bonus points are available for running on real IBM Quantum hardware.",
+    },
+    {
       question: "What software and hardware do I need to bring?",
       answer:
         "You only need a laptop with a modern web browser and Python 3.10+ installed. Detailed setup guides for configuring Jupyter Notebooks and installing Qiskit will be shared with all registered attendees in the pre-fest welcome packet.",

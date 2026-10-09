@@ -8,6 +8,7 @@ import { Announcement } from "@/components/Announcement";
 import { ValueProps } from "@/components/ValueProps";
 import { About } from "@/components/About";
 import { Schedule } from "@/components/Schedule";
+import { HackathonChallenges } from "@/components/HackathonChallenges";
 import { Organizers } from "@/components/Organizers";
 import { Venue } from "@/components/Venue";
 import { OpenToAll } from "@/components/OpenToAll";
@@ -65,6 +66,9 @@ export default function HomePage() {
 
         {/* 4. Programme / Schedule */}
         <Schedule />
+
+        {/* 4.5 Hackathon Problem Statements */}
+        <HackathonChallenges />
 
         {/* 5. Organizers */}
         <Organizers />
