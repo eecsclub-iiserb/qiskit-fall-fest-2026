@@ -167,6 +167,38 @@ export function HackathonChallenges() {
           </div>
         </div>
 
+        {/* Key Details */}
+        <div className="mb-6 p-5 sm:p-6 rounded-xl bg-foundation-surface/90 border border-foundation-border space-y-3">
+          <p className="text-xs sm:text-sm font-mono text-white">{HACKATHON_METADATA.schedule}</p>
+          <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm text-[#E0E0E0]/85">
+            <li>{HACKATHON_METADATA.teamSize}</li>
+            <li>{HACKATHON_METADATA.submitVia}</li>
+            <li>{HACKATHON_METADATA.presentations}</li>
+            <li>
+              Full details and rules:{" "}
+              <a href="https://github.com/eecsclubofficial/qiskit-hackathon-2026" target="_blank" rel="noopener noreferrer" className="underline text-qiskit-blue">
+                github.com/eecsclubofficial/qiskit-hackathon-2026
+              </a>
+            </li>
+            <li>
+              Queries:{" "}
+              <a href="https://chat.whatsapp.com/FvFrymOOzJZ52msbEnCFHv" target="_blank" rel="noopener noreferrer" className="underline text-qiskit-blue">
+                Join the WhatsApp group
+              </a>
+            </li>
+            <li>
+              Contact:{" "}
+              <a href={`mailto:${HACKATHON_METADATA.contact}`} className="underline text-qiskit-blue">
+                {HACKATHON_METADATA.contact}
+              </a>
+            </li>
+          </ul>
+          <div className="p-3.5 rounded-lg bg-qiskit-purple/10 border border-qiskit-purple/25 text-xs sm:text-sm text-[#E0E0E0]/90">
+            <span className="font-semibold text-white">Prepare a pitch deck in advance. </span>
+            {HACKATHON_METADATA.pitchDeck.replace("Prepare a pitch deck in advance. ", "")}
+          </div>
+        </div>
+
         {/* Read This First Notice Card */}
         <div className="mb-10 p-5 sm:p-6 rounded-xl bg-foundation-surface/90 border border-foundation-border">
           <div className="flex items-start gap-3.5">
@@ -675,7 +707,7 @@ export function HackathonChallenges() {
                     On Using AI
                   </h4>
                   <p className="text-xs text-[#E0E0E0]/80 leading-relaxed font-mono">
-                    AI assistants are welcome at every step. The AI-use note and the live questions exist because the person submitting is responsible for the result: you should be able to explain each circuit, formula and plot, and show how you verified it.
+                    AI assistants are welcome at every step. The AI-use note and the questions asked of selected teams exist because the person submitting is responsible for the result: you should be able to explain each circuit, formula and plot, and show how you verified it.
                   </p>
                 </div>
               </div>

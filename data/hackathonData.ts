@@ -401,7 +401,7 @@ export const JUDGING_CRITERIA: JudgingCriterion[] = [
     criterion: "Understanding and insight",
     points: 25,
     description:
-      "Clear explanation of why the method works or fails, shown in the write-up and in the live questions.",
+      "Clear explanation of why the method works or fails, shown in the write-up (and in the questions, for teams selected to present).",
   },
   {
     criterion: "Honest comparison and limits",
@@ -416,17 +416,17 @@ export const JUDGING_CRITERIA: JudgingCriterion[] = [
       "Stretch goals, combined tracks, or a new idea beyond the suggested statements.",
   },
   {
-    criterion: "Clarity of demo and code",
+    criterion: "Clarity of code and write-up",
     points: 10,
     description:
-      "Readable, reproducible code and a clear five-minute story.",
+      "Readable, reproducible code and a clear write-up",
   },
 ];
 
 export const HACKATHON_METADATA = {
   author: "@Vatsal",
   releaseDate: "October 9, 2026",
-  duration: "One week (Oct 9 – Oct 18, 2026)",
+  duration: "Oct 9 to Oct 17, 2026 (submissions close Oct 17, 12:00 noon)",
   whatWeReward:
     "A project that works, that you can explain line by line, and that is honestly compared against a classical alternative. Using AI to write code is allowed and encouraged; being unable to explain or verify that code is not.",
   simulatorsFirst:
@@ -435,13 +435,25 @@ export const HACKATHON_METADATA = {
     "If you have your own idea, such as a quantum game, an algorithm tutor, a benchmark of a quantum algorithm from our workshop (Grover, phase estimation, the QFT), or a tool that makes any of the above easier for the next student, propose it. Write three sentences on the problem, the method, and how you will know it worked, and check with the organisers early in the week.",
   scopingAdvice:
     "Get the smallest version of each part working separately first, then connect them. A small, honest, working combination beats an ambitious one that does not run.",
+  schedule:
+    "Build: Oct 9 to Oct 17 | Submission deadline: Oct 17, 12:00 noon | Presentations (selected teams): Oct 18",
+  teamSize: "Team size: max 4",
+  submitVia:
+    "Submit via Google Form (link to be shared by the organisers). Submission is the repository link only; nothing is presented at submission time.",
+  presentations:
+    "Selected teams only, invited after submissions are reviewed, give a 5-minute demo followed by questions on Oct 18; every team member must be able to take questions. Teams not invited are still fully judged on their submission.",
+  pitchDeck:
+    "Prepare a pitch deck in advance. It is not part of the submission and is not used for round-one selection (teams are selected from their submissions alone), but selected teams get less than 24 hours between the invitation and the presentation.",
+  contact: "eecs.club.official@gmail.com",
   submissionChecklist: [
-    "Repository or notebook that runs from a clean start, with versions of the packages listed",
-    "Write-up (two to four pages) with the problem, method, results and an honest limits section",
-    "At least one figure that shows the main result",
+    "Deadline: Oct 17, 2026, 12:00 noon, submitted via the Google Form (repository link only)",
+    "GitHub repository that runs from a clean start: pinned requirements.txt, and the Python version in the README",
+    "WRITEUP.pdf (two to four pages) with Problem, Method, Results and Honest limits",
+    "At least one figure that shows the main result, in the write-up and in figures/",
     "A short AI-use note: which tools you used, one thing the AI got wrong, and how you caught it",
-    "A 5-minute live demo that every team member can take questions on",
+    "(Advised, not submitted) A short pitch deck is ready in case we are invited to present on Oct 18",
   ],
+
   bonusHardware:
     "Bonus points are available for a hardware run on a real IBM backend, with a clear comparison against the simulator.",
 };
